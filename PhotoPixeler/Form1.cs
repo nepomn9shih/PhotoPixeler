@@ -26,7 +26,7 @@ namespace PhotoPixeler
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            if (_bitmaps == null) return;
+            if (_bitmaps == null  || _bitmaps.Count == 0) return;
                 pictureBox1.Image = _bitmaps[trackBar1.Value - 1];
             
         }
