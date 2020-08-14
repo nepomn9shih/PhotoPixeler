@@ -1,0 +1,11 @@
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\bin\Debug\PhotoPixeler.exe.config
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\bin\Debug\PhotoPixeler.exe
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\bin\Debug\PhotoPixeler.pdb
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.csprojAssemblyReference.cache
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.Properties.Resources.resources
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.csproj.GenerateResource.cache
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.csproj.CoreCompileInputs.cache
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.exe
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.pdb
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.Pixel.resources
+C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.Form1.resources
