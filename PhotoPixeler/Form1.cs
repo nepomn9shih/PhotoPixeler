@@ -51,21 +51,20 @@ namespace PhotoPixeler
            
         }
 
-        private List<Form1> GetPixels(Bitmap bitmap)
+        private List<Pixel> GetPixels(Bitmap bitmap)
         {
-            var pixels = new List<Form1>(bitmap.Width * bitmap.Height);
+            var pixels = new List<Pixel>(bitmap.Width * bitmap.Height);
             for (int y = 0; y < bitmap.Height; y++)
             {
                 for (int x = 0; x <bitmap.Width; x++)
                 {
                     pixels.Add(new Pixel()
-                    {
-                        Color = bitmap.GetPixel(x, y),
-                        Point = new Point() { X = x, Y = y }
+                    {Color = bitmap.GetPixel(x, y),
+                     Point = new Point() { X = x, Y = y }
                     }); 
                 }
             }
             return pixels;
-        }
+        } 
     }
 }
