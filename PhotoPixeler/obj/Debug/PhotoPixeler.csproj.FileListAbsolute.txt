@@ -7,5 +7,4 @@ C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.cspr
 C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.csproj.CoreCompileInputs.cache
 C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.exe
 C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.pdb
-C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.Pixel.resources
 C:\Users\nepom\Desktop\С#\PhotoPixeler\PhotoPixeler\obj\Debug\PhotoPixeler.Form1.resources

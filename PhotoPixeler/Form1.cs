@@ -12,7 +12,8 @@ namespace PhotoPixeler
 {
     public partial class Form1 : Form
     {
-        private List<Bitmap>_bitmaps = new List<Bitmap>(); 
+        private List<Bitmap>_bitmaps = new List<Bitmap>();
+        private Random _random = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -48,7 +49,27 @@ namespace PhotoPixeler
 
         private void RunPocessing(Bitmap bitmap)
         {
-           
+            var pixels = GetPixels(bitmap);
+            var pixelsInStep = (bitmap.Width * bitmap.Height) / 100;
+            var currentPixelsSet = new List<Pixel>(pixels.Count - pixelsInStep);
+
+            for (int i=1; i<trackBar1.Maximum; i++)
+            {
+                for (int j = 0; j < pixelsInStep; j++ )
+                {
+                    var index = _random.Next(pixels.Count);
+                    currentPixelsSet.Add(pixels[index]);
+                    pixels.RemoveAt(index);
+                }
+                var currentBitmap = new Bitmap(bitmap.Width, bitmap.Height);
+                foreach (var pixel in currentPixelsSet)
+                {
+                    currentBitmap.SetPixel(pixel.Point.X, pixel.Point.Y, pixel.Color);
+                }
+                _bitmaps.Add(currentBitmap);
+                Text = $"{i}%";
+            }
+            _bitmaps.Add(bitmap);
         }
 
         private List<Pixel> GetPixels(Bitmap bitmap)
