@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace PhotoPixeler
 {
@@ -36,14 +37,19 @@ namespace PhotoPixeler
 
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
            if( openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                var sw = Stopwatch.StartNew();
+                menuStrip1.Enabled = trackBar1.Enabled = false;
                 pictureBox1.Image = null;
                 _bitmaps.Clear();
                 var bitmap = new Bitmap(openFileDialog1.FileName);
-                RunPocessing(bitmap);
+                await Task.Run(() => { RunPocessing(bitmap);});
+                menuStrip1.Enabled = trackBar1.Enabled = true;
+                sw.Stop();
+                Text = sw.Elapsed.ToString();
             }
         }
 
@@ -67,7 +73,10 @@ namespace PhotoPixeler
                     currentBitmap.SetPixel(pixel.Point.X, pixel.Point.Y, pixel.Color);
                 }
                 _bitmaps.Add(currentBitmap);
-                Text = $"{i}%";
+                this.Invoke(new Action(() =>
+                {
+                    Text = $"{i}%";
+                })); 
             }
             _bitmaps.Add(bitmap);
         }
